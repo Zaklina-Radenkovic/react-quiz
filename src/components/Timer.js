@@ -4,8 +4,8 @@ import { useEffect } from "react";
 function Timer({ dispatch, secondsRemaining }) {
   // const { dispatch, secondsRemaining } = useQuiz();
 
-  // const mins = Math.floor(secondsRemaining / 60);
-  // const seconds = secondsRemaining % 60;
+  const mins = Math.floor(secondsRemaining / 60);
+  const seconds = secondsRemaining % 60;
 
   useEffect(
     function () {
@@ -20,10 +20,9 @@ function Timer({ dispatch, secondsRemaining }) {
 
   return (
     <div className="timer">
-      {/* {mins < 10 && "0"}
+      {mins < 10 && "0"}
       {mins}:{seconds < 10 && "0"}
-      {seconds} */}
-      {secondsRemaining}
+      {seconds}
     </div>
   );
 }

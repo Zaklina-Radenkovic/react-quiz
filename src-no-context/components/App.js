@@ -103,7 +103,7 @@ function App() {
   );
 
   useEffect(() => {
-    fetch("http://localhost:9000/questions")
+    fetch("https://my-json-server.typicode.com/zaklina-radenkovic/react-quiz/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
